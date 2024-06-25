@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+//using ImageService;
 using ImageService;
 
 namespace Api.Microservice.Autor.Controllers

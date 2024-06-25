@@ -4,6 +4,7 @@ using AutoMapper;
 using Grpc.Core;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using ImageService;
 
 namespace Api.Microservice.Autor.Aplicacion
 {

@@ -21,7 +21,7 @@ builder.Services.AddDbContext<ContextoAutor>(options =>
 
 builder.Services.AddGrpcClient<ImageService.ImageService.ImageServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:5056"); // Dirección del servicio gRPC
+    o.Address = new Uri("http://localhost:5056"); // 5056 Dirección del servicio gRPC
 });
 
 //Cors
@@ -32,12 +32,13 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", builder =>
     {
-        builder.WithOrigins("http://localhost:3000", "http://localhost:3001")
+        builder.AllowAnyOrigin()
                .AllowAnyMethod()
                .AllowAnyHeader();
     });
 });
 
+///builder.Services.AddGrpcClient
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
